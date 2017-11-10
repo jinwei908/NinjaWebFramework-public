@@ -6,7 +6,7 @@ This framework utilizes the HTTP protocol to receive data (Keystrokes, Mouse Cli
 
 This has been deployed on the Amazon Cloud so it can be accessed from anywhere, anytime.
 
-*This project is done while learning about MongoDB, AngularJS and Django and is the first time I am using these frameworks. Also, because this is built in 5 days (including improvements made to NinjaLS), there may be some inconsistencies or places where is may seemed amateurish.*
+*This project is done while learning about MongoDB, AngularJS and Django and is the first time I am using these frameworks. Also, because this is built in 5 days (including improvements made to NinjaLS), there may be some inconsistencies or places where is may seem amateurish.*
 
 Please visit my [Blog](https://www.reversethatshell.com) for more information and screenshots of this Web Framework.
 - [Blog - Web Framwork](https://www.reversethatshell.com/2017/07/23/keylogger-and-analysis-console-penetration-testing-tool/)
