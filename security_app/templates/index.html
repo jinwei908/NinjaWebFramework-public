@@ -1,0 +1,81 @@
+
+<!DOCTYPE html>
+<html lang="en" class="body-full-height" ng-app="securityApp">
+    {% load static %}
+    <head>        
+        <!-- META SECTION -->
+        <title>Ninja Web Framework - The Ultimate Spying Tool</title>            
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        
+        <link rel="icon" href="favicon.ico" type="image/x-icon" />
+        <!-- END META SECTION -->
+        
+        <!-- CSS INCLUDE -->        
+        <link rel="stylesheet" type="text/css" id="theme" href="{% static 'css/theme-default.css' %}"/>
+        <link rel="stylesheet" type="text/css" id="theme" href="{% static 'css/tang-cloud.css' %}"/>
+        <link rel="stylesheet" href="{% static 'bower_components/slick-carousel/slick/slick.css'%}">
+        <link rel="stylesheet" href="{% static 'bower_components/slick-carousel/slick/slick-theme.css'%}">
+        <!-- EOF CSS INCLUDE -->  
+        
+        <script type="text/javascript" src="https://code.angularjs.org/1.3.0-rc.2/angular.min.js"></script>
+        <script type="text/javascript" src="https://unpkg.com/angular-ui-router/release/angular-ui-router.min.js"></script>
+        <script type="text/javascript" src="https://code.angularjs.org/1.3.0-rc.2/angular-resource.min.js"></script>
+        
+        <script type="text/javascript" src="{% static 'js/dashboard/plugins/jquery/jquery.min.js' %}"></script>
+        <script type="text/javascript" src="{% static 'js/dashboard/plugins/jquery/jquery-ui.min.js'%}"></script>
+        <script type="text/javascript" src="{% static 'js/dashboard/plugins/bootstrap/bootstrap.min.js'%}"></script> 
+        
+        <script src="{% static 'bower_components/slick-carousel/slick/slick.js' %}"></script>
+        <script src="{% static 'bower_components/angular-slick/dist/slick.js' %}"></script>
+        <script type="text/javascript" src="{% static 'js/tangCloud.min.js' %}"></script>
+        <script type="text/javascript" src="{% static 'js/app.js' %}"></script>
+        <script type="text/javascript" src="{% static 'js/routes.js' %}"></script>
+        <script type="text/javascript" src="{% static 'js/services.js' %}"></script>
+        <script type="text/javascript" src="{% static 'js/controllers.js' %}"></script>
+        <script type="text/javascript" src="{% static 'js/directives.js' %}"></script>
+        
+        
+        
+        
+        <script type="text/javascript" src="{% static 'js/dashboard/plugins/morris/raphael-min.js'%}"></script>
+        <script type="text/javascript" src="{% static 'js/dashboard/plugins/morris/morris.min.js'%}"></script>       
+        <script type="text/javascript" src="{% static 'js/dashboard/plugins/rickshaw/d3.v3.js'%}"></script>
+        <script type="text/javascript" src="{% static 'js/dashboard/plugins/rickshaw/rickshaw.min.js'%}"></script>
+        <script type='text/javascript' src="{% static 'js/dashboard/plugins/jvectormap/jquery-jvectormap-1.2.2.min.js'%}"></script>
+        <script type='text/javascript' src="{% static 'js/dashboard/plugins/jvectormap/jquery-jvectormap-world-mill-en.js'%}"></script>                
+        <script type='text/javascript' src="{% static 'js/dashboard/plugins/bootstrap/bootstrap-datepicker.js'%}"></script>   
+        
+        
+        <script type='text/javascript' src="{% static 'js/dashboard/plugins/icheck/icheck.min.js' %}"></script>
+        <script type="text/javascript" src="{% static 'js/dashboard/plugins/mcustomscrollbar/jquery.mCustomScrollbar.min.js' %}"></script>   
+        <script type="text/javascript" src="{% static 'js/dashboard/plugins/tagsinput/jquery.tagsinput.min.js' %}"></script>
+        <script type="text/javascript" src="{% static 'js/dashboard/plugins/owl/owl.carousel.min.js'%}"></script> 
+        
+        
+        <script type="text/javascript" src="{% static 'js/dashboard/plugins/knob/jquery.knob.min.js' %}"></script>
+        
+        <script type="text/javascript" src="{% static 'js/dashboard/plugins/moment.min.js'%}"></script>
+        <script type="text/javascript" src="{% static 'js/dashboard/plugins/daterangepicker/daterangepicker.js'%}"></script>
+        
+        <script type="text/javascript" src="{% static 'js/dashboard/plugins.js'%}"></script>        
+        <script type="text/javascript" src="{% static 'js/dashboard/actions.js'%}"></script>
+        
+        <!-- END SCRIPTS -->                                  
+    </head>
+    <body>
+        
+        <div class="container">
+            <ui-view></ui-view>
+            
+        </div>
+        
+    </body>
+</html>
+
+
+
+
+
+

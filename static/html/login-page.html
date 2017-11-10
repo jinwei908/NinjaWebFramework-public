@@ -1,0 +1,61 @@
+<div class="login-container">
+        
+    
+    <div class="login-box animated fadeInDown">
+        <div class="login-logo"></div>
+        <div class="login-body">
+            <div class="login-title"><strong>Welcome</strong>, Please login</div>
+            
+            
+            <form ng-submit="submit()" class="form-horizontal"> <!--- Form group and Button MUST BE INSIDE, so that the submit function is passed to the button button in the scope is run --->
+                <div class="form-group">
+                    <div class="col-md-12">
+                        <input type="text" ng-model="username" class="form-control" placeholder="Username"/>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-md-12">
+                        <input type="password" ng-model="password" class="form-control" placeholder="Password"/>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-md-12">
+                        <button type="submit" class="btn btn-info btn-block">Log In</button>
+                    </div>
+                </div>
+            </form>
+            
+            <!--- <form action="index.html" class="form-horizontal" method="post">
+            <div class="form-group">
+                <div class="col-md-12">
+                    <input type="text" class="form-control" placeholder="Username"/>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-md-12">
+                    <input type="password" class="form-control" placeholder="Password"/>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-md-6">
+                    <a href="#/dashboard" class="btn btn-link btn-block">Forgot your password?</a>
+                </div>
+                <div class="col-md-6">
+                    <button class="btn btn-info btn-block">Log In</button>
+                </div>
+            </div>
+            </form> --->
+        </div>
+        <div class="login-footer">
+            <div class="pull-left">
+                &copy; 2017 Ninja Web Framework
+            </div>
+            <div class="pull-right">
+                <a href="#">About</a> |
+                <a href="#">Privacy</a> |
+                <a href="#">Contact Us</a>
+            </div>
+        </div>
+    </div>
+
+</div>

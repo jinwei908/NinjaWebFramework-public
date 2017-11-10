@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en-us" ng-app="myApp">
+    <head>
+        <title>AngularJS Weather Forecast SPA</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+        <meta charset="UTF-8">
+
+        <!-- load bootstrap and fontawesome via CDN -->
+        <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" />
+        <style>
+            html, body, input, select, textarea
+            {
+                font-size: 1.05em !important;
+            }
+        </style>
+        
+        <!-- load angular via CDN -->
+        <script src="//code.angularjs.org/1.3.0-rc.2/angular.min.js"></script>
+        <script src="//unpkg.com/angular-ui-router/release/angular-ui-router.min.js"></script>
+        <script src="//code.angularjs.org/1.3.0-rc.2/angular-resource.min.js"></script>
+        <script src="parentchild.js"></script>
+    </head>
+    <body>
+
+        <header>
+			<nav class="navbar navbar-default">
+			<div class="container">
+				<div class="navbar-header">
+					<a class="navbar-brand" href="/">AngularJS Parent Child</a>
+				</div>
+
+				<ul class="nav navbar-nav navbar-right">
+					<li><a href="#/"><!--- <i class="fa fa-home"></i>---> Home</a></li>
+				</ul>
+			</div>
+			</nav>
+		</header>
+
+        <div class="container">
+            
+           <div ng-controller="parent1Controller">
+                
+               {{parent1vm.message}}
+               
+               <div ng-controller="child1Controller"> <!--- Nested Controller, move outward to the next scope upwards (e.g. chidl1Controller can find child 1's message, if child1Controller does not have message, it will get the parent's message) --->
+                    {{parent1vm.message}} <!--- find this variable in child, BUT cannot find it in this Controller, so it will go UP and find that controller --->
+                   <br/>
+                   {{child1vm.message}}
+                
+               </div>
+            
+            </div>
+            
+            <hr/>
+            
+            <div ng-controller="parent2Controller as parent2vm"> <!--- Using Controller AS this will make it better, since we are not using Scope AT ALL --->
+                
+               {{parent2vm.message}}
+               
+               <div ng-controller="child2Controller as child2vm"> <!--- Nested Controller, move outward to the next scope upwards (e.g. chidl1Controller can find child 2's message, if child2Controller does not have message, it will get the parent's message) --->
+                    {{parent2vm.message}} <!--- BETTER SOLUTION USING THIS--->
+                   <br/>
+                   {{child2vm.message}}
+                    <br/>
+                   <input type="text" ng-model="parent2vm.message"/> <!--- 2 WAY BINDING as well! --->
+                   <!--- EVERYTHING OK, except if you want to use custom watchers (then you have to inject $scope) --->
+               </div>
+            
+            </div>
+            
+            <hr/>
+            
+            <div ng-controller="parent3Controller">
+                
+               {{message}}
+               
+               <div ng-controller="child3Controller"> <!--- Nested Controller, move outward to the next scope upwards (e.g. chidl1Controller can find child 3's message, if child3Controller does not have message, it will get the parent's message) --->
+                    {{$parent.message}} <!--- Get controller above this, and get the scope and message --->
+                   <br/>
+                   {{message}}
+                
+               </div>
+            
+            </div>
+		</div>
+
+    </body>
+</html>

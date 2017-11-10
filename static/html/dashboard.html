@@ -1,0 +1,877 @@
+<!DOCTYPE html>
+
+<head>
+    {% load static %}
+    <!-- META SECTION -->
+    <title>Ninja Web Framework - The Ultimate Spying Tool</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    <!-- END META SECTION -->
+
+    <!-- CSS INCLUDE -->
+    <!--- <link rel="stylesheet" type="text/css" id="theme" href="{% static 'css/theme-default.css' %}"/> --->
+
+    <!-- EOF CSS INCLUDE -->
+
+    <!-- START SCRIPTS -->
+    <!-- START PLUGINS -->
+    <!--- <script type="text/javascript" src="{% static 'js/dashboard/plugins/jquery/jquery.min.js' %}"></script>
+        <script type="text/javascript" src="{% static 'js/dashboard/plugins/jquery/jquery-ui.min.js'%}"></script>
+        <script type="text/javascript" src="{% static 'js/dashboard/plugins/bootstrap/bootstrap.min.js'%}"></script>         --->
+
+    <!-- END PLUGINS -->
+
+    <!-- START THIS PAGE PLUGINS-->
+    <!---
+        <script type='text/javascript' src="{% static 'js/dashboard/plugins/icheck/icheck.min.js'%}"></script>        
+        <script type="text/javascript" src="{% static 'js/dashboard/plugins/mcustomscrollbar/jquery.mCustomScrollbar.min.js'%}"></script>
+        <script type="text/javascript" src="{% static 'js/dashboard/plugins/scrolltotop/scrolltopcontrol.js'%}"></script>
+        
+        <script type="text/javascript" src="{% static 'js/dashboard/plugins/morris/raphael-min.js'%}"></script>
+        <script type="text/javascript" src="{% static 'js/dashboard/plugins/morris/morris.min.js'%}"></script>       
+        <script type="text/javascript" src="{% static 'js/dashboard/plugins/rickshaw/d3.v3.js'%}"></script>
+        <script type="text/javascript" src="{% static 'js/dashboard/plugins/rickshaw/rickshaw.min.js'%}"></script>
+        <script type='text/javascript' src="{% static 'js/dashboard/plugins/jvectormap/jquery-jvectormap-1.2.2.min.js'%}"></script>
+        <script type='text/javascript' src="{% static 'js/dashboard/plugins/jvectormap/jquery-jvectormap-world-mill-en.js'%}"></script>                
+        <script type='text/javascript' src="{% static 'js/dashboard/plugins/bootstrap/bootstrap-datepicker.js'%}"></script>                
+        <script type="text/javascript" src="{% static 'js/dashboard/plugins/owl/owl.carousel.min.js'%}"></script>                 
+        
+        <script type="text/javascript" src="{% static 'js/dashboard/plugins/moment.min.js'%}"></script>
+        <script type="text/javascript" src="{% static 'js/dashboard/plugins/daterangepicker/daterangepicker.js'%}"></script>
+        --->
+    <!-- END THIS PAGE PLUGINS-->
+
+    <!-- START TEMPLATE -->
+    <!---
+        <script type="text/javascript" src="{% static 'js/dashboard/settings.js'%}"></script>
+        
+        <script type="text/javascript" src="{% static 'js/dashboard/plugins.js'%}"></script>        
+        <script type="text/javascript" src="{% static 'js/dashboard/actions.js'%}"></script>
+        
+        <script type="text/javascript" src="{% static 'js/dashboard/demo_dashboard.js'%}"></script>
+        --->
+    <!-- END TEMPLATE -->
+    <!-- END SCRIPTS -->
+</head>
+
+<body>
+    <!-- START PAGE CONTAINER -->
+    <div class="page-container">
+
+        <!-- START PAGE SIDEBAR -->
+        <div class="page-sidebar">
+            <!-- START X-NAVIGATION -->
+            <ul class="x-navigation">
+                <li class="xn-logo">
+                    <a href="index.html">Joli Admin</a>
+                    <a href="#/dashboard" class="x-navigation-control"></a>
+                </li>
+                <li class="xn-profile">
+                    <a href="#/dashboard" class="profile-mini">
+                        <img src="assets/images/users/avatar.jpg" alt="John Doe" />
+                    </a>
+                    <div class="profile">
+                        <div class="profile-image">
+                            <img src="assets/images/users/avatar.jpg" alt="John Doe" />
+                        </div>
+                        <div class="profile-data">
+                            <div class="profile-data-name">John Doe</div>
+                            <div class="profile-data-title">Web Developer/Designer</div>
+                        </div>
+                        <div class="profile-controls">
+                            <a href="pages-profile.html" class="profile-control-left"><span class="fa fa-info"></span></a>
+                            <a href="pages-messages.html" class="profile-control-right"><span class="fa fa-envelope"></span></a>
+                        </div>
+                    </div>
+                </li>
+                <li class="xn-title">Navigation</li>
+                <li class="active">
+                    <a href="index.html"><span class="fa fa-desktop"></span> <span class="xn-text">Dashboard</span></a>
+                </li>
+                <li class="xn-openable">
+                    <a href="#/dashboard"><span class="fa fa-files-o"></span> <span class="xn-text">Pages</span></a>
+                    <ul>
+                        <li><a href="pages-gallery.html"><span class="fa fa-image"></span> Gallery</a></li>
+                        <li><a href="pages-profile.html"><span class="fa fa-user"></span> Profile</a></li>
+                        <li><a href="pages-address-book.html"><span class="fa fa-users"></span> Address Book</a></li>
+                        <li class="xn-openable">
+                            <a href="#/dashboard"><span class="fa fa-clock-o"></span> Timeline</a>
+                            <ul>
+                                <li><a href="pages-timeline.html"><span class="fa fa-align-center"></span> Default</a></li>
+                                <li><a href="pages-timeline-simple.html"><span class="fa fa-align-justify"></span> Full Width</a></li>
+                            </ul>
+                        </li>
+                        <li class="xn-openable">
+                            <a href="#/dashboard"><span class="fa fa-envelope"></span> Mailbox</a>
+                            <ul>
+                                <li><a href="pages-mailbox-inbox.html"><span class="fa fa-inbox"></span> Inbox</a></li>
+                                <li><a href="pages-mailbox-message.html"><span class="fa fa-file-text"></span> Message</a></li>
+                                <li><a href="pages-mailbox-compose.html"><span class="fa fa-pencil"></span> Compose</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="pages-messages.html"><span class="fa fa-comments"></span> Messages</a></li>
+                        <li><a href="pages-calendar.html"><span class="fa fa-calendar"></span> Calendar</a></li>
+                        <li><a href="pages-tasks.html"><span class="fa fa-edit"></span> Tasks</a></li>
+                        <li><a href="pages-content-table.html"><span class="fa fa-columns"></span> Content Table</a></li>
+                        <li><a href="pages-faq.html"><span class="fa fa-question-circle"></span> FAQ</a></li>
+                        <li><a href="pages-search.html"><span class="fa fa-search"></span> Search</a></li>
+                        <li class="xn-openable">
+                            <a href="#/dashboard"><span class="fa fa-file"></span> Blog</a>
+
+                            <ul>
+                                <li><a href="pages-blog-list.html"><span class="fa fa-copy"></span> List of Posts</a></li>
+                                <li><a href="pages-blog-post.html"><span class="fa fa-file-o"></span>Single Post</a></li>
+                            </ul>
+                        </li>
+                        <li class="xn-openable">
+                            <a href="#/dashboard"><span class="fa fa-sign-in"></span> Login</a>
+                            <ul>
+                                <li><a href="pages-login.html">App Login</a></li>
+                                <li><a href="pages-login-website.html">Website Login</a></li>
+                                <li><a href="pages-login-website-light.html"> Website Login Light</a></li>
+                            </ul>
+                        </li>
+                        <li class="xn-openable">
+                            <a href="#/dashboard"><span class="fa fa-warning"></span> Error Pages</a>
+                            <ul>
+                                <li><a href="pages-error-404.html">Error 404 Sample 1</a></li>
+                                <li><a href="pages-error-404-2.html">Error 404 Sample 2</a></li>
+                                <li><a href="pages-error-500.html"> Error 500</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li class="xn-openable">
+                    <a href="#/dashboard"><span class="fa fa-file-text-o"></span> <span class="xn-text">Layouts</span></a>
+                    <ul>
+                        <li><a href="layout-boxed.html">Boxed</a></li>
+                        <li><a href="layout-nav-toggled.html">Navigation Toggled</a></li>
+                        <li><a href="layout-nav-top.html">Navigation Top</a></li>
+                        <li><a href="layout-nav-right.html">Navigation Right</a></li>
+                        <li><a href="layout-nav-top-fixed.html">Top Navigation Fixed</a></li>
+                        <li><a href="layout-nav-custom.html">Custom Navigation</a></li>
+                        <li><a href="layout-frame-left.html">Frame Left Column</a></li>
+                        <li><a href="layout-frame-right.html">Frame Right Column</a></li>
+                        <li><a href="layout-search-left.html">Search Left Side</a></li>
+                        <li><a href="blank.html">Blank Page</a></li>
+                    </ul>
+                </li>
+                <li class="xn-title">Components</li>
+                <li class="xn-openable">
+                    <a href="#/dashboard"><span class="fa fa-cogs"></span> <span class="xn-text">UI Kits</span></a>
+                    <ul>
+                        <li><a href="ui-widgets.html"><span class="fa fa-heart"></span> Widgets</a></li>
+                        <li><a href="ui-elements.html"><span class="fa fa-cogs"></span> Elements</a></li>
+                        <li><a href="ui-buttons.html"><span class="fa fa-square-o"></span> Buttons</a></li>
+                        <li><a href="ui-panels.html"><span class="fa fa-pencil-square-o"></span> Panels</a></li>
+                        <li><a href="ui-icons.html"><span class="fa fa-magic"></span> Icons</a>
+                            <div class="informer informer-warning">+679</div>
+                        </li>
+                        <li><a href="ui-typography.html"><span class="fa fa-pencil"></span> Typography</a></li>
+                        <li><a href="ui-portlet.html"><span class="fa fa-th"></span> Portlet</a></li>
+                        <li><a href="ui-sliders.html"><span class="fa fa-arrows-h"></span> Sliders</a></li>
+                        <li><a href="ui-alerts-popups.html"><span class="fa fa-warning"></span> Alerts & Popups</a></li>
+                        <li><a href="ui-lists.html"><span class="fa fa-list-ul"></span> Lists</a></li>
+                        <li><a href="ui-tour.html"><span class="fa fa-random"></span> Tour</a></li>
+                    </ul>
+                </li>
+                <li class="xn-openable">
+                    <a href="#/dashboard"><span class="fa fa-pencil"></span> <span class="xn-text">Forms</span></a>
+                    <ul>
+                        <li>
+                            <a href="form-layouts-two-column.html"><span class="fa fa-tasks"></span> Form Layouts</a>
+                            <div class="informer informer-danger">New</div>
+                            <ul>
+                                <li><a href="form-layouts-one-column.html"><span class="fa fa-align-justify"></span> One Column</a></li>
+                                <li><a href="form-layouts-two-column.html"><span class="fa fa-th-large"></span> Two Column</a></li>
+                                <li><a href="form-layouts-tabbed.html"><span class="fa fa-table"></span> Tabbed</a></li>
+                                <li><a href="form-layouts-separated.html"><span class="fa fa-th-list"></span> Separated Rows</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="form-elements.html"><span class="fa fa-file-text-o"></span> Elements</a></li>
+                        <li><a href="form-validation.html"><span class="fa fa-list-alt"></span> Validation</a></li>
+                        <li><a href="form-wizards.html"><span class="fa fa-arrow-right"></span> Wizards</a></li>
+                        <li><a href="form-editors.html"><span class="fa fa-text-width"></span> WYSIWYG Editors</a></li>
+                        <li><a href="form-file-handling.html"><span class="fa fa-floppy-o"></span> File Handling</a></li>
+                    </ul>
+                </li>
+                <li class="xn-openable">
+                    <a href="tables.html"><span class="fa fa-table"></span> <span class="xn-text">Tables</span></a>
+                    <ul>
+                        <li><a href="table-basic.html"><span class="fa fa-align-justify"></span> Basic</a></li>
+                        <li><a href="table-datatables.html"><span class="fa fa-sort-alpha-desc"></span> Data Tables</a></li>
+                        <li><a href="table-export.html"><span class="fa fa-download"></span> Export Tables</a></li>
+                    </ul>
+                </li>
+                <li class="xn-openable">
+                    <a href="#/dashboard"><span class="fa fa-bar-chart-o"></span> <span class="xn-text">Charts</span></a>
+                    <ul>
+                        <li><a href="charts-morris.html"><span class="xn-text">Morris</span></a></li>
+                        <li><a href="charts-nvd3.html"><span class="xn-text">NVD3</span></a></li>
+                        <li><a href="charts-rickshaw.html"><span class="xn-text">Rickshaw</span></a></li>
+                        <li><a href="charts-other.html"><span class="xn-text">Other</span></a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="maps.html"><span class="fa fa-map-marker"></span> <span class="xn-text">Maps</span></a>
+                </li>
+                <li class="xn-openable">
+                    <a href="#/dashboard"><span class="fa fa-sitemap"></span> <span class="xn-text">Navigation Levels</span></a>
+                    <ul>
+                        <li class="xn-openable">
+                            <a href="#/dashboard">Second Level</a>
+                            <ul>
+                                <li class="xn-openable">
+                                    <a href="#/dashboard">Third Level</a>
+                                    <ul>
+                                        <li class="xn-openable">
+                                            <a href="#"/dashboard>Fourth Level</a>
+                                            <ul>
+                                                <li><a href="#/dashboard">Fifth Level</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+
+            </ul>
+            <!-- END X-NAVIGATION -->
+        </div>
+        <!-- END PAGE SIDEBAR -->
+
+        <!-- PAGE CONTENT -->
+        <div class="page-content">
+
+            <!-- START X-NAVIGATION VERTICAL -->
+            <ul class="x-navigation x-navigation-horizontal x-navigation-panel">
+                <!-- TOGGLE NAVIGATION -->
+                <li class="xn-icon-button">
+                    <a href="#/dashboard" class="x-navigation-minimize"><span class="fa fa-dedent"></span></a>
+                </li>
+                <!-- END TOGGLE NAVIGATION -->
+                <!-- SEARCH -->
+                <li class="xn-search">
+                    <form role="form">
+                        <input type="text" name="search" placeholder="Search..." />
+                    </form>
+                </li>
+                <!-- END SEARCH -->
+                <!-- SIGN OUT -->
+                <li class="xn-icon-button pull-right">
+                    <a href="#/dashboard" class="mb-control" data-box="#mb-signout"><span class="fa fa-sign-out"></span></a>
+                </li>
+                <!-- END SIGN OUT -->
+                <!-- MESSAGES -->
+                <li class="xn-icon-button pull-right">
+                    <a href="#/dashboard"><span class="fa fa-comments"></span></a>
+                    <div class="informer informer-danger">4</div>
+                    <div class="panel panel-primary animated zoomIn xn-drop-left xn-panel-dragging">
+                        <div class="panel-heading">
+                            <h3 class="panel-title"><span class="fa fa-comments"></span> Messages</h3>
+                            <div class="pull-right">
+                                <span class="label label-danger">4 new</span>
+                            </div>
+                        </div>
+                        <div class="panel-body list-group list-group-contacts scroll" style="height: 200px;">
+                            <a href="#/dashboard" class="list-group-item">
+                                <div class="list-group-status status-online"></div>
+                                <img src="assets/images/users/user2.jpg" class="pull-left" alt="John Doe" />
+                                <span class="contacts-title">John Doe</span>
+                                <p>Praesent placerat tellus id augue condimentum</p>
+                            </a>
+                            <a href="#/dashboard" class="list-group-item">
+                                <div class="list-group-status status-away"></div>
+                                <img src="assets/images/users/user.jpg" class="pull-left" alt="Dmitry Ivaniuk" />
+                                <span class="contacts-title">Dmitry Ivaniuk</span>
+                                <p>Donec risus sapien, sagittis et magna quis</p>
+                            </a>
+                            <a href="#/dashboard" class="list-group-item">
+                                <div class="list-group-status status-away"></div>
+                                <img src="assets/images/users/user3.jpg" class="pull-left" alt="Nadia Ali" />
+                                <span class="contacts-title">Nadia Ali</span>
+                                <p>Mauris vel eros ut nunc rhoncus cursus sed</p>
+                            </a>
+                            <a href="#/dashboard" class="list-group-item">
+                                <div class="list-group-status status-offline"></div>
+                                <img src="assets/images/users/user6.jpg" class="pull-left" alt="Darth Vader" />
+                                <span class="contacts-title">Darth Vader</span>
+                                <p>I want my money back!</p>
+                            </a>
+                        </div>
+                        <div class="panel-footer text-center">
+                            <a href="pages-messages.html">Show all messages</a>
+                        </div>
+                    </div>
+                </li>
+                <!-- END MESSAGES -->
+                <!-- TASKS -->
+                <li class="xn-icon-button pull-right">
+                    <a href="#/dashboard"><span class="fa fa-tasks"></span></a>
+                    <div class="informer informer-warning">3</div>
+                    <div class="panel panel-primary animated zoomIn xn-drop-left xn-panel-dragging">
+                        <div class="panel-heading">
+                            <h3 class="panel-title"><span class="fa fa-tasks"></span> Tasks</h3>
+                            <div class="pull-right">
+                                <span class="label label-warning">3 active</span>
+                            </div>
+                        </div>
+                        <div class="panel-body list-group scroll" style="height: 200px;">
+                            <a class="list-group-item" href="#/dashboard">
+                                <strong>Phasellus augue arcu, elementum</strong>
+                                <div class="progress progress-small progress-striped active">
+                                    <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width: 50%;">50%</div>
+                                </div>
+                                <small class="text-muted">John Doe, 25 Sep 2014 / 50%</small>
+                            </a>
+                            <a class="list-group-item" href="#/dashboard">
+                                <strong>Aenean ac cursus</strong>
+                                <div class="progress progress-small progress-striped active">
+                                    <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%;">80%</div>
+                                </div>
+                                <small class="text-muted">Dmitry Ivaniuk, 24 Sep 2014 / 80%</small>
+                            </a>
+                            <a class="list-group-item" href="#/dashboard">
+                                <strong>Lorem ipsum dolor</strong>
+                                <div class="progress progress-small progress-striped active">
+                                    <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100" style="width: 95%;">95%</div>
+                                </div>
+                                <small class="text-muted">John Doe, 23 Sep 2014 / 95%</small>
+                            </a>
+                            <a class="list-group-item" href="#/dashboard">
+                                <strong>Cras suscipit ac quam at tincidunt.</strong>
+                                <div class="progress progress-small">
+                                    <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%;">100%</div>
+                                </div>
+                                <small class="text-muted">John Doe, 21 Sep 2014 /</small><small class="text-success"> Done</small>
+                            </a>
+                        </div>
+                        <div class="panel-footer text-center">
+                            <a href="pages-tasks.html">Show all tasks</a>
+                        </div>
+                    </div>
+                </li>
+                <!-- END TASKS -->
+            </ul>
+            <!-- END X-NAVIGATION VERTICAL -->
+
+            <!-- START BREADCRUMB -->
+            <ul class="breadcrumb">
+                <li><a href="#/dashboard">Home</a></li>
+                <li class="active">Dashboard</li>
+            </ul>
+            <!-- END BREADCRUMB -->
+
+            <!-- PAGE CONTENT WRAPPER -->
+            <div class="page-content-wrap">
+
+                <!-- START WIDGETS -->
+                <div class="col-md-3">
+
+                    <!-- START WIDGET CLOCK -->
+                    <div class="widget widget-info" style="padding-top:25px">
+                        <div class="widget-big-int plugin-clock">00:00</div>
+                        <div class="widget-subtitle plugin-date">Loading...</div>
+                        <!---<div class="widget-controls">
+                            <a href="#" class="widget-control-right widget-remove" data-toggle="tooltip" data-placement="left" title="Remove Widget"><span class="fa fa-times"></span></a>
+                        </div>
+                        <div class="widget-buttons widget-c3">
+                            <div class="col">
+                                <a href="#"><span class="fa fa-clock-o"></span></a>
+                            </div>
+                            <div class="col">
+                                <a href="#"><span class="fa fa-bell"></span></a>
+                            </div>
+                            <div class="col">
+                                <a href="#"><span class="fa fa-calendar"></span></a>
+                            </div>
+                        </div> --->
+                    </div>
+                    <!-- END WIDGET CLOCK -->
+
+                </div>
+
+                <div class="col-md-3">
+
+                    <!-- START WIDGET SLIDER -->
+
+                    <div class="widget widget-default widget-carousel">
+                        <!---<data-owl-carousel id="owl-example" class="owl-carousel">
+                            <div owl-carousel-item="" ng-repeat="item in ::items1" class="item">
+                                <p>{{::item}}</p>
+                            </div> 
+                            <div id="owl-example" owl-carousel-item="" ng-repeat="item in ::items1" class="item">
+                                <div class="item">
+                                    <div class="widget-title">Total Visitors</div>
+                                    <div class="widget-subtitle">27/08/2014 15:23</div>
+                                    <div class="widget-int">3,548</div>
+                                </div>
+                            </div>
+                        </data-owl-carousel>--->
+                        <!--- <div class="owl-carousel" id="owl-example">
+
+                            <div class="item">
+                                <div class="widget-title">Total Visitors</div>
+                                <div class="widget-subtitle">27/08/2014 15:23</div>
+                                <div class="widget-int" id="imageCount">3,548</div>
+                            </div>
+
+                            <div class="item">
+                                <div class="widget-title">Returned</div>
+                                <div class="widget-subtitle">Visitors</div>
+                                <div class="widget-int">1,695</div>
+                            </div>
+                            <div class="item">
+                                <div class="widget-title">New</div>
+                                <div class="widget-subtitle">Visitors</div>
+                                <div class="widget-int">1,977</div>
+                            </div>
+                        </div>--->
+                        <slick dots="true" autoplay="true" infinite="true" speed=500 slides-to-show=1 touch-move="false" slides-to-scroll=1 class="slider one-time" ng-if="carouselVariables.length > 0">
+                            <!--<a href="https://res.cloudinary.com/www-reversethatshell-com/image/upload/w_1200,h_675,c_scale/v1504380349/JIAJINPANEL/User/ib26gpl0ilxcvxfgqlyy.jpg" target="_blank"></a> -->
+                            <div ng-repeat="data in carouselVariables">
+                                <div>
+                                    <div class="widget-title">{{data.headerText}}</div>
+                                    <div class="widget-subtitle">{{data.middleText}}</div>
+                                    <div class="widget-int">{{data.count}}</div>
+                                </div>
+                            </div>
+                        </slick>
+                        <!---<div class="widget-controls">                                
+                                        <a href="#" class="widget-control-right widget-remove" data-toggle="tooltip" data-placement="top" title="Remove Widget"><span class="fa fa-times"></span></a>
+                                    </div>--->
+                    </div>
+                    <!-- END WIDGET SLIDER -->
+
+                </div>
+
+                <div class="col-md-3">
+
+                    <!-- START WIDGET REGISTRED -->
+                    <div class="widget widget-default widget-item-icon" onclick="location.href='pages-address-book.html';">
+                        <div class="widget-item-left">
+                            <span class="fa fa-laptop"></span>
+                        </div>
+                        <div class="widget-data">
+                            <div class="widget-int num-count">{{ numHosts }}</div>
+                            <div class="widget-title">Zombie Machines</div>
+                            <div class="widget-subtitle">Active Hosts</div>
+                        </div>
+                        <!---<div class="widget-controls">
+                                <a href="#" class="widget-control-right widget-remove" data-toggle="tooltip" data-placement="top" title="Remove Widget"><span class="fa fa-times"></span></a>
+                            </div> --->
+                    </div>
+                    <!-- END WIDGET REGISTRED -->
+
+                </div>
+                <div class="col-md-3">
+
+                    <!-- START WIDGET MESSAGES -->
+                    <div class="widget widget-default widget-item-icon" onclick="location.href='pages-messages.html';">
+                        <div class="widget-item-left">
+                            <span class="fa fa-inbox"></span>
+                        </div>
+                        <div class="widget-data">
+                            <div class="widget-int num-count">{{ dataPackets }}</div>
+                            <div class="widget-title">Data Packets</div>
+                            <div class="widget-subtitle">In the last 7 days</div>
+                        </div>
+                        <!---<div class="widget-controls">
+                                <a href="#" class="widget-control-right widget-remove" data-toggle="tooltip" data-placement="top" title="Remove Widget"><span class="fa fa-times"></span></a>
+                            </div>--->
+                    </div>
+                    <!-- END WIDGET MESSAGES -->
+
+                </div>
+
+
+            </div>
+
+
+            <!-- END WIDGETS -->
+
+            <div class="row">
+                <div class="col-md-4">
+
+                    <!-- START USERS ACTIVITY BLOCK -->
+                    <!--
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <div class="panel-title-box">
+                                <h3>Users Activity</h3>
+                                <span>Users vs returning</span>
+                            </div>
+                            <ul class="panel-controls" style="margin-top: 2px;">
+                                <li><a href="#" class="panel-fullscreen"><span class="fa fa-expand"></span></a></li>
+                                <li><a href="#" class="panel-refresh"><span class="fa fa-refresh"></span></a></li>
+                                <li class="dropdown">
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="fa fa-cog"></span></a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="#" class="panel-collapse"><span class="fa fa-angle-down"></span> Collapse</a></li>
+                                        <li><a href="#" class="panel-remove"><span class="fa fa-times"></span> Remove</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="panel-body padding-0">
+                            <div class="chart-holder" id="dashboard-bar-1" style="height: 200px;"></div>
+                        </div>
+                    </div>
+                    -->
+                    <!-- END USERS ACTIVITY BLOCK -->
+                    <!-- NEWS WIDGET -->
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <div class="panel-title-box">
+                                <h3>Interesting Discoveries</h3>
+                                <span>Recent Interesting Discoveries</span>
+                            </div>
+                            <!--<h3 class="panel-title">Interesting Discoveries</h3>
+                            <span>Recent Interesting Discoveries</span> --->
+                            <ul class="panel-controls">
+                                <li><a href="#/dashboard" class="control-danger"><span class="fa fa-pencil"></span></a></li>
+                            </ul>
+                        </div>
+                        <div class="panel-body scroll" style="height: 205px;" ng-if="interestingDiscoveries">
+                            <div ng-repeat="discovery in interestingDiscoveries">
+                                <div>
+                                    <h6> {{discovery.computer_name}}</h6>
+                                    <p>
+                                        {{discovery.string_content}}
+                                        <span class="text-muted"><i class="fa fa-clock-o"></i>{{discovery.log_time}}</span>
+                                    </p>
+                                </div>
+                            </div>
+                            <!--- <h6>Integer finibus orci vel</h6>
+                            <p>
+                                Nam luctus nulla molestie nisi fermentum, ac maximus elit bibendum.
+                                <span class="text-muted"><i class="fa fa-clock-o"></i> 10:22 Today</span>
+                            </p>
+                            <h6>Morbi iaculis quam at eros</h6>
+                            <p>
+                                Fusce dictum mauris quis velit cursus, consectetur tempor justo volutpat.
+                                <span class="text-muted"><i class="fa fa-clock-o"></i> 09:58 Today</span>
+                            </p>
+                            <h6>Nam iaculis urna</h6>
+                            <p>
+                                Ut a est in est vulputate varius ac vitae quam, consectetur, eget fringilla purus tincidunt.
+                                <span class="text-muted"><i class="fa fa-clock-o"></i> 06:33 Today</span>
+                            </p> --->
+                        </div>
+                    </div>
+                    <!-- END NEWS WIDGET -->
+
+                </div>
+                <div class="col-md-4">
+
+                    <!-- START VISITORS BLOCK -->
+                    <!--<div class="panel panel-default">
+                        <div class="panel-heading">
+                            <div class="panel-title-box">
+                                <h3>Visitors</h3>
+                                <span>Visitors (last month)</span>
+                            </div>
+                            <ul class="panel-controls" style="margin-top: 2px;">
+                                <li><a href="#/dashboard" class="panel-fullscreen"><span class="fa fa-expand"></span></a></li>
+                                <li><a href="#/dashboard" class="panel-refresh"><span class="fa fa-refresh"></span></a></li>
+                                <li class="dropdown">
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="fa fa-cog"></span></a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="#/dashboard" class="panel-collapse"><span class="fa fa-angle-down"></span> Collapse</a></li>
+                                        <li><a href="#/dashboard" class="panel-remove"><span class="fa fa-times"></span> Remove</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="panel-body padding-0">
+                            <div class="chart-holder" id="dashboard-donut-1" style="height: 200px;"></div>
+                        </div>
+                    </div>-->
+                    <!-- END VISITORS BLOCK -->
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <div class="panel-title-box">
+                                <h3>Word Cloud</h3>
+                                <span>Most Tags Appeared</span>
+                            </div>
+                        </div>
+                        <div style="height:260px">
+                            <tang-cloud words="words" on-click="test(word)" width="300px" height="700px"></tang-cloud>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="col-md-4">
+
+                    <!-- START PROJECTS BLOCK -->
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <div class="panel-title-box">
+                                <h3>Hosts</h3>
+                                <span>Host Activity</span>
+                            </div>
+                            <ul class="panel-controls" style="margin-top: 2px;">
+                                <li><a href="#/dashboard" class="panel-fullscreen"><span class="fa fa-expand"></span></a></li>
+                                <li><a href="#/dashboard" class="panel-refresh"><span class="fa fa-refresh"></span></a></li>
+                                <li class="dropdown">
+                                    <a href="#/dashboard" class="dropdown-toggle" data-toggle="dropdown"><span class="fa fa-cog"></span></a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="#/dashboard" class="panel-collapse"><span class="fa fa-angle-down"></span> Collapse</a></li>
+                                        <li><a href="#/dashboard" class="panel-remove"><span class="fa fa-times"></span> Remove</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="panel-body scroll panel-body-table" style="height: 210px" ng-if="hostActivity.length > 0">
+
+                            <div class="table-responsive">
+                                <table class="table table-bordered table-striped">
+                                    <thead>
+                                        <tr>
+                                            <th width="50%">Host</th>
+                                            <th width="10%">Status</th>
+                                            <th width="30%">Activity</th>    
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+
+                                            <tr ng-repeat="host in hostActivity">
+                                                <td><strong>{{host.name}}</strong></td>
+                                                <td><span class="label {{host.style.labelStyle}}">{{host.style.activity}}</span></td>
+                                                <td>
+                                                    <div class="progress progress-small progress-striped active">
+                                                        <div class="progress-bar {{host.style.barStyle}}" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" ng-style="{'width': host.style.width}">{{host.percentage}}%</div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+
+                                        <!---<tr>
+                                            <td><strong>Merlin-Hotel 1</strong></td>
+                                            <td><span class="label label-warning">Medium</span></td>
+                                            <td>
+                                                <div class="progress progress-small progress-striped active">
+                                                    <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width: 40%;">40%</div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>Taurus</strong></td>
+                                            <td><span class="label label-warning">Updating</span></td>
+                                            <td>
+                                                <div class="progress progress-small progress-striped active">
+                                                    <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width: 72%;">72%</div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>Leo</strong></td>
+                                            <td><span class="label label-success">Support</span></td>
+                                            <td>
+                                                <div class="progress progress-small progress-striped active">
+                                                    <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width: 100%;">100%</div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>Virgo</strong></td>
+                                            <td><span class="label label-success">Support</span></td>
+                                            <td>
+                                                <div class="progress progress-small progress-striped active">
+                                                    <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width: 100%;">100%</div>
+                                                </div>
+                                            </td>
+                                        </tr> --->
+
+                                    </tbody>
+                                </table>
+                            </div>
+
+                        </div>
+                    </div>
+                    <!-- END PROJECTS BLOCK -->
+
+                </div>
+
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <div class="panel-title-box">
+                                    <h3>Recent Screenshots</h3>
+                                    <span>Host Activity</span>
+                                </div>
+                            </div>
+                            <div class="panel-body panel-body">
+                                        
+                                <slick infinite="false" speed=300 slides-to-show=3 touch-move="false" slides-to-scroll=1 class="slider one-time" ng-if="screenshotActivity.length > 0">
+                                    <!--<a href="https://res.cloudinary.com/www-reversethatshell-com/image/upload/w_1200,h_675,c_scale/v1504380349/JIAJINPANEL/User/ib26gpl0ilxcvxfgqlyy.jpg" target="_blank"></a> -->
+                                    <div ng-repeat="screenshot in screenshotActivity">
+                                        <div>
+                                            <img data-lazy="{{screenshot.image_secure_url}}"/>
+                                            <a href="{{screenshot.username}}" target="_blank"><div class="widget-subtitle" style="width:100%; text-align:center">{{screenshot.computer_name}}</div>
+                                            <div class="widget-subtitle" style="width:100%; text-align:center">
+                                                {{screenshot.log_time}}
+                                            </div>
+                                                </a>
+                                        </div>
+                                    </div>
+                                    <!--<div>
+                                        <div class="image"><img data-lazy="https://res.cloudinary.com/www-reversethatshell-com/image/upload/w_280,h_157,c_scale/v1504377679/JIAJINPANEL/User/du7g2szzztoagly06wz4.jpg" /></div>
+                                    </div>
+                                    <div>
+                                        <div class="image"><img data-lazy="https://res.cloudinary.com/www-reversethatshell-com/image/upload/w_280,h_157,c_scale/v1504374951/JIAJINPANEL/User/yt00qawpjcpmcdpurl9p.jpg" /></div>
+                                    </div>
+                                    <div>
+                                        <div class="image"><img data-lazy="https://res.cloudinary.com/www-reversethatshell-com/image/upload/w_280,h_157,c_scale/v1504372383/JIAJINPANEL/User/diesskefxccjm5ihfszh.jpg" /></div>
+                                    </div>
+                                    <div>
+                                        <div class="image"><img data-lazy="https://res.cloudinary.com/www-reversethatshell-com/image/upload/w_280,h_157,c_scale/v1504371884/JIAJINPANEL/User/l1c8y3vco2z4lf9vbkrr.jpg" /></div>
+                                    </div>
+                                    <div>
+                                        <div class="image"><img data-lazy="https://res.cloudinary.com/www-reversethatshell-com/image/upload/w_280,h_157,c_scale/v1504371682/MERLINHOTEL1/Merlin%20Hotel/ghmdgkq6azind2vjmvdr.jpg" /></div>
+                                    </div>-->
+                                </slick>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-8">
+
+                        <!-- START SALES BLOCK -->
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <div class="panel-title-box">
+                                    <h3>Sales</h3>
+                                    <span>Sales activity by period you selected</span>
+                                </div>
+                                <ul class="panel-controls panel-controls-title">
+                                    <li>
+                                        <div id="reportrange" class="dtrange">
+                                            <span></span><b class="caret"></b>
+                                        </div>
+                                    </li>
+                                    <li><a href="#/dashboard" class="panel-fullscreen rounded"><span class="fa fa-expand"></span></a></li>
+                                </ul>
+
+                            </div>
+                            <div class="panel-body">
+                                <div class="col-md-12">
+                                    <div class="progress-list">
+                                        <div class="pull-left"><strong>In Queue</strong></div>
+                                        <div class="pull-right">75%</div>
+                                        <div class="progress progress-small progress-striped active">
+                                            <div class="progress-bar progress-bar-primary" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width: 75%;">75%</div>
+                                        </div>
+                                    </div>
+                                    <div class="progress-list">
+                                        <div class="pull-left"><strong>Shipped Products</strong></div>
+                                        <div class="pull-right">450/500</div>
+                                        <div class="progress progress-small progress-striped active">
+                                            <div class="progress-bar progress-bar-primary" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width: 90%;">90%</div>
+                                        </div>
+                                    </div>
+                                    <div class="progress-list">
+                                        <div class="pull-left"><strong class="text-danger">Returned Products</strong></div>
+                                        <div class="pull-right">25/500</div>
+                                        <div class="progress progress-small progress-striped active">
+                                            <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width: 5%;">5%</div>
+                                        </div>
+                                    </div>
+                                    <div class="progress-list">
+                                        <div class="pull-left"><strong class="text-warning">Progress Today</strong></div>
+                                        <div class="pull-right">75/150</div>
+                                        <div class="progress progress-small progress-striped active">
+                                            <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width: 50%;">50%</div>
+                                        </div>
+                                    </div>
+                                    <p><span class="fa fa-warning"></span> Data update in end of each hour. You can update it manual by pressign update button</p>
+                                </div>
+                                <div class="col-md-8">
+                                    <div id="dashboard-map-seles" style="width: 100%; height: 200px"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- END SALES BLOCK -->
+
+                    </div>
+
+                    <div class="col-md-4">
+
+                        <!-- START SALES & EVENTS BLOCK -->
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <div class="panel-title-box">
+                                    <h3>Sales & Event</h3>
+                                    <span>Event "Purchase Button"</span>
+                                </div>
+                                <ul class="panel-controls" style="margin-top: 2px;">
+                                    <li><a href="#/dashboard" class="panel-fullscreen"><span class="fa fa-expand"></span></a></li>
+                                    <li><a href="#/dashboard" class="panel-refresh"><span class="fa fa-refresh"></span></a></li>
+                                    <li class="dropdown">
+                                        <a href="#/dashboard" class="dropdown-toggle" data-toggle="dropdown"><span class="fa fa-cog"></span></a>
+                                        <ul class="dropdown-menu">
+                                            <li><a href="#/dashboard" class="panel-collapse"><span class="fa fa-angle-down"></span> Collapse</a></li>
+                                            <li><a href="#/dashboard" class="panel-remove"><span class="fa fa-times"></span> Remove</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="panel-body padding-0">
+                                <div class="chart-holder" id="dashboard-line-1" style="height: 200px;"></div>
+                            </div>
+                        </div>
+                        <!-- END SALES & EVENTS BLOCK -->
+
+                    </div>
+                </div>
+
+                <!-- START DASHBOARD CHART -->
+                <div class="chart-holder" id="dashboard-area-1" style="height: 200px;"></div>
+                <div class="block-full-width">
+
+                </div>
+                <!-- END DASHBOARD CHART -->
+
+            </div>
+            <!-- END PAGE CONTENT WRAPPER -->
+        </div>
+        <!-- END PAGE CONTENT -->
+    </div>
+    <!-- END PAGE CONTAINER -->
+
+    <!-- MESSAGE BOX-->
+    <div class="message-box animated fadeIn" data-sound="alert" id="mb-signout">
+        <div class="mb-container">
+            <div class="mb-middle">
+                <div class="mb-title"><span class="fa fa-sign-out"></span> Log <strong>Out</strong> ?</div>
+                <div class="mb-content">
+                    <p>Are you sure you want to log out?</p>
+                    <p>Press No if youwant to continue work. Press Yes to logout current user.</p>
+                </div>
+                <div class="mb-footer">
+                    <div class="pull-right">
+                        <a href="pages-login.html" class="btn btn-success btn-lg">Yes</a>
+                        <button class="btn btn-default btn-lg mb-control-close">No</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- END MESSAGE BOX-->
+
+    <!-- START PRELOADS -->
+    <audio id="audio-alert" src="audio/alert.mp3" preload="auto"></audio>
+    <audio id="audio-fail" src="audio/fail.mp3" preload="auto"></audio>
+    <!-- END PRELOADS -->
+
+
+</body>

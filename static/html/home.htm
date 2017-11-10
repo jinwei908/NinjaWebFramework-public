@@ -1,0 +1,15 @@
+<div class="row">
+
+    <div class="col-md-6 col-md-offset-3"> <!--- Forecast will be in the middle of the page (3 - 6 - 3 = 12) --->
+    
+        <h4>Forecast by City</h4>
+        <form ng-submit="submit()"> <!--- Form group and Button MUST BE INSIDE, so that the submit function is passed to the button button in the scope is run --->
+            <div class="form-group">
+                <input type="text" ng-model="city" class="form-control"/> <!--- ng-model = "city" is 2 way binding for $scope.city --->
+            </div>
+            <!---<a href="#/forecast" class="btn btn-primary">Get Forecast</a>---> <!--- Button to forecast page --->
+            <input type="submit" class="btn btn-primary" value="Get Forecast"/> <!--- Convert to input type submit keep the class --->
+        </form>
+    </div>
+    
+</div>

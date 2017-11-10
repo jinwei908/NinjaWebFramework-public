@@ -1,0 +1,12 @@
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">{{ weatherDay.dt | date : dateFormat }}</h3> <!--- w.dt as the date as per json Using Filters Why is Date: not working? dateFormat from the directive scope definition!-->
+        <!---<h3 class="panel-title">{{ w.dt | date : dateFormat }}</h3> ---> <!--- w.dt as the date as per json Using Filters Why is Date:--> 
+    </div>
+    <div class="panel-body">
+        Daytime Temperature: {{convertToStandard({daytimeTemp:weatherDay.temp.day})}} Fahrenheit <!--- w.temp.day as the temp day as per json -->
+        <!--- Daytime Temperature: {{convertToFahrenheit(w.temp.day)}} Fahrenheit --->
+        <!--- Convert to standard is defined in the directive scope definition -->
+        <!--- Parameter for convert to standard MUST be a map, from argument defined in view .htm to a variable / object here -->
+    </div>
+</div>
