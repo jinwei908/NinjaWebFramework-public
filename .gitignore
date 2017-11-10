@@ -6,4 +6,6 @@
 
 # Config Files
 security_app/restapi/config.py
+security_app/restapi/config.pyc
 security_app/config.py
+security_app/config.pyc
